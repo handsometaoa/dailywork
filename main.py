@@ -19,7 +19,7 @@ template_id = os.environ["TEMPLATE_ID"]
 
 def get_now_time():
     a = datetime.now()
-    b = a.strftime("%Y/%M/%D %H:%M:%S")
+    b = a.strftime("%Y/%m/%d %H:%M:%S")
     return b
 
 def get_weather():
