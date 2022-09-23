@@ -20,7 +20,7 @@ template_id = os.environ["TEMPLATE_ID"]
 def get_now_time():
     a = datetime.datetime.now()
     b = a.strftime("%Y/%M/%D %H:%M:%S")
-    retrun b
+    return b
 
 def get_weather():
   url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
