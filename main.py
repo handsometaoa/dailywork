@@ -8,7 +8,7 @@ import random
 import pytz as pytz
 
 tz = pytz.timezone('Asia/Shanghai')  # 东八区
-time = datetime.now().fromtimestamp(int(time.time()), tz).strftime('%Y/%m/%d %H:%M:%S')
+now = datetime.now().fromtimestamp(int(time.time()), tz).strftime('%Y/%m/%d %H:%M:%S')
 
 today = datetime.now()
 start_date = os.environ['START_DATE']
@@ -61,7 +61,7 @@ data = {
 
         "weather":{"value":wea}, #天气
         "temperature":{"value":temperature},
-        "now": {"value": time},
+        "now": {"value": now},
         "wind":{"value":wind},
         "city":{"value":"杨陵示范区","color":"#1c4587"},
         "humidity":{"value":humidity},
