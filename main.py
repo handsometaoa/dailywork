@@ -13,7 +13,7 @@ SHA_TZ = timezone(
 )
 utc_now = datetime.utcnow().replace(tzinfo=timezone.utc)
 beijing_now = utc_now.astimezone(SHA_TZ)
-niw = beijing_now.strftime("%Y/%m/%d %H:%M:%S")
+now = beijing_now.strftime("%Y/%m/%d %H:%M:%S")
 
 today = datetime.now()
 start_date = os.environ['START_DATE']
