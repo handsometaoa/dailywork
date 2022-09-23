@@ -5,8 +5,13 @@ from wechatpy.client.api import WeChatMessage, WeChatTemplate
 import requests
 import os
 import random
+import pytz as pytz
 
 today = datetime.now()
+
+tz = pytz.timezone('Asia/Shanghai')  # 东八区
+time = datetime.datetime.fromtimestamp(int(time.time()), tz).strftime('%Y/%m/%d %H:%M:%S')
+
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
 birthday = os.environ['BIRTHDAY']
@@ -52,12 +57,12 @@ client = WeChatClient(app_id, app_secret)
 
 wm = WeChatMessage(client)
 wea, temperature,wind,humidity = get_weather()
-now = get_now_time()
+# now = get_now_time()
 data = {
 
         "weather":{"value":wea}, #天气
         "temperature":{"value":temperature},
-        "now": {"value": now},
+        "now": {"value": time},
         "wind":{"value":wind},
         "city":{"value":"杨陵示范区","color":"#1c4587"},
         "humidity":{"value":humidity},
