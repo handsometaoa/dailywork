@@ -8,7 +8,7 @@ import random
 import pytz as pytz
 
 tz = pytz.timezone('Asia/Shanghai')  # 东八区
-time = datetime.datetime.fromtimestamp(int(time.time()), tz).strftime('%Y/%m/%d %H:%M:%S')
+time = datetime.now().fromtimestamp(int(time.time()), tz).strftime('%Y/%m/%d %H:%M:%S')
 
 today = datetime.now()
 start_date = os.environ['START_DATE']
