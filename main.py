@@ -1,4 +1,4 @@
-from datetime import date, datetime,timedelta,timezone
+from datetime import date, datetime
 import math
 from wechatpy import WeChatClient
 from wechatpy.client.api import WeChatMessage, WeChatTemplate
@@ -11,6 +11,7 @@ SHA_TZ = timezone(
     timedelta(hours=8),
     name='Asia/Shanghai',
 )
+utc_now = datetime.utcnow().replace(tzinfo=timezone.utc)
 beijing_now = utc_now.astimezone(SHA_TZ)
 niw = beijing_now.strftime("%Y/%m/%d %H:%M:%S")
 
