@@ -18,7 +18,7 @@ user_id = os.environ["USER_ID"]
 template_id = os.environ["TEMPLATE_ID"]
 
 def get_now_time():
-    a = datetime.datetime.now()
+    a = datetime.now()
     b = a.strftime("%Y/%M/%D %H:%M:%S")
     return b
 
