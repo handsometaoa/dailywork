@@ -10,7 +10,7 @@ import pytz as pytz
 today = datetime.now()
 
 tz = pytz.timezone('Asia/Shanghai')  # 东八区
-time = datetime.datetime.fromtimestamp(int(time.time()), tz).strftime('%Y/%m/%d %H:%M:%S')
+time = datetime.now().fromtimestamp(int(time.time()), tz).strftime('%Y/%m/%d %H:%M:%S')
 
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
@@ -20,6 +20,7 @@ app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
 
 user_id = os.environ["USER_ID"]
+user_id2 = os.environ["USER_ID2]
 template_id = os.environ["TEMPLATE_ID"]
 
 def get_now_time():
@@ -72,3 +73,4 @@ data = {
 
 
 res = wm.send_template(user_id, template_id, data)
+res2 = wm.send_template(user_id2, template_id, data)
