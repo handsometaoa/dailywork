@@ -77,6 +77,6 @@ data = {
 
 
 res = wm.send_template(user_id[1], template_id, data)
-res2 = wm.send_template(user_id[2], template_id, data)
-res3 = wm.send_template(user_id[3], template_id, data)
+# res2 = wm.send_template(user_id[2], template_id, data)
+# res3 = wm.send_template(user_id[3], template_id, data)
 
