@@ -17,9 +17,6 @@ now = beijing_now.strftime("%Y/%m/%d %H:%M:%S")
 
 today = datetime.now()
 
-tz = pytz.timezone('Asia/Shanghai')  # 东八区
-time = datetime.now().fromtimestamp(int(time.time()), tz).strftime('%Y/%m/%d %H:%M:%S')
-
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
 birthday = os.environ['BIRTHDAY']
