@@ -73,4 +73,5 @@ data = {
 
 
 res = wm.send_template(user_id, template_id, data)
+wm = WeChatMessage(client)
 res2 = wm.send_template(user_id2, template_id, data)
