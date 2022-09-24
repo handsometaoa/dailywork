@@ -75,8 +75,8 @@ data = {
         "love_days":{"value":get_count()},
         "birthday_left":{"value":get_birthday(),"color":"#980000"},
         "words":{"value":get_words(), "color":get_random_color()}}
-
-res = wm.send_template(user_id.user1, template_id, data)
-res2 = wm.send_template(user_id.user2, template_id, data)
-res3 = wm.send_template(user_id.user3, template_id, data)
+result = user_id.split(',')
+res1 = wm.send_template(result[1], template_id, data)
+res2 = wm.send_template(result[2], template_id, data)
+res3 = wm.send_template(result[3], template_id, data)
 
