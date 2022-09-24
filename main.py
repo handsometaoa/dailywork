@@ -68,7 +68,7 @@ data = {
 
         "weather":{"value":wea}, #天气
         "temperature":{"value":temperature},
-        "now": {"value": time},
+        "now": {"value": now},
         "wind":{"value":wind},
         "city":{"value":"杨陵示范区","color":"#1c4587"},
         "humidity":{"value":humidity},
