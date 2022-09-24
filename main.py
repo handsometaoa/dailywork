@@ -76,7 +76,7 @@ data = {
         "birthday_left":{"value":get_birthday(),"color":"#980000"},
         "words":{"value":get_words(), "color":get_random_color()}}
 result = user_id.split(',')
-res1 = wm.send_template(result[0], template_id, data)
-res2 = wm.send_template(result[1], template_id, data)
-res3 = wm.send_template(result[2], template_id, data)
+
+for user in result:
+  wm.send_template(user, template_id, data)
 
