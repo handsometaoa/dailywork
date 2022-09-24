@@ -25,6 +25,8 @@ app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
 
 user_id = os.environ["USER_ID"]
+user_id2 = os.environ["USER_ID2"]
+
 template_id = os.environ["TEMPLATE_ID"]
 
 # def get_now_time():
@@ -75,7 +77,7 @@ data = {
         "birthday_left":{"value":get_birthday(),"color":"#980000"},
         "words":{"value":get_words(), "color":get_random_color()}}
 
-res = wm.send_template("oPlBs5lbsBgUf92YvUfRgpAv_Amg", template_id, data)
-res2 = wm.send_template("oPlBs5mqy8SzpJmz4F9rV2guz3yA", template_id, data)
+res = wm.send_template(user_id, template_id, data)
+res2 = wm.send_template(user_id2, template_id, data)
 # res3 = wm.send_template(user_id[3], template_id, data)
 
