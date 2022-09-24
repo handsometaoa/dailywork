@@ -6,8 +6,6 @@ import requests
 import os
 import random
 import pytz as pytz
-<<<<<<< HEAD
-=======
 
 SHA_TZ = timezone(
     timedelta(hours=8),
@@ -16,7 +14,6 @@ SHA_TZ = timezone(
 utc_now = datetime.utcnow().replace(tzinfo=timezone.utc)
 beijing_now = utc_now.astimezone(SHA_TZ)
 now = beijing_now.strftime("%Y/%m/%d %H:%M:%S")
->>>>>>> 34b13e0a73c4d6f74a97f0b7838838c5ffe8548e
 
 today = datetime.now()
 
@@ -84,7 +81,4 @@ data = {
 
 
 res = wm.send_template(user_id, template_id, data)
-
-
-wm2 = WeChatMessage(client)
-res2 = wm2.send_template(user_id2, template_id, data)
+res2 = wm.send_template(user_id2, template_id, data)
