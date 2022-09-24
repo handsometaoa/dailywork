@@ -74,8 +74,8 @@ data = {
         "love_days":{"value":get_count()},
         "birthday_left":{"value":get_birthday(),"color":"#980000"},
         "words":{"value":get_words(), "color":get_random_color()}}
-
-logging.info(user_id[1])
+print(user_id)
+print(user_id[1])
 
 res = wm.send_template("oPlBs5lbsBgUf92YvUfRgpAv_Amg", template_id, data)
 # res2 = wm.send_template(user_id[2], template_id, data)
