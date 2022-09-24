@@ -1,4 +1,4 @@
-from datetime import date, datetime
+from datetime import date, datetime,timedelta,timezone
 import math
 from wechatpy import WeChatClient
 from wechatpy.client.api import WeChatMessage, WeChatTemplate
@@ -6,6 +6,17 @@ import requests
 import os
 import random
 import pytz as pytz
+<<<<<<< HEAD
+=======
+
+SHA_TZ = timezone(
+    timedelta(hours=8),
+    name='Asia/Shanghai',
+)
+utc_now = datetime.utcnow().replace(tzinfo=timezone.utc)
+beijing_now = utc_now.astimezone(SHA_TZ)
+now = beijing_now.strftime("%Y/%m/%d %H:%M:%S")
+>>>>>>> 34b13e0a73c4d6f74a97f0b7838838c5ffe8548e
 
 today = datetime.now()
 
@@ -23,10 +34,10 @@ user_id = os.environ["USER_ID"]
 user_id2 = os.environ["USER_ID2]
 template_id = os.environ["TEMPLATE_ID"]
 
-def get_now_time():
-    a = datetime.now()
-    b = a.strftime("%Y/%m/%d %H:%M:%S")
-    return b
+# def get_now_time():
+#     a = datetime.now()
+#     b = a.strftime("%Y/%m/%d %H:%M:%S")
+#     return b
 
 def get_weather():
   url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
